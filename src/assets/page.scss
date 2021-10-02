@@ -13,33 +13,42 @@ a{
 .dark {
     background: #292c35 !important;
     transition: background 0.3s linear;
+    .alerta{
+        .alerta_mensagem {
+            background: #dce9ff !important;
+            color: #3f506d !important;
+          }
+    }
     
-      p,h1,h2,h3,.name,li{
+    p,h1,h2,h3,.name,li{
         color: #dce9ff !important;
-      }
-      .versao{
+    }
+    .versao{
         background-color: #dce9ff !important;
-      }
-      a{
+    }
+    a{
         color: #dce9ff;
-        }
-        .iconspeck{
+    }
+    .iconspeck{
             color: #dce9ff;
-        }
+    }
       
-      .label{
+    .label{
         &::after,&::before{
           color: #dce9ff !important;
         }
-      }
-    
+    }
+    .icons{
+        .icon{
+            &:hover .copy{
+                color: #dce9ff !important;
+            }
+        }
+    }
 }
 body{
     background-color: #f5f8fd;
     color: #3f506d;
-
-    
-    
 }
 .page{
     .alerta{
@@ -194,8 +203,10 @@ body{
                 a{
                     font-size: 30px;
                     margin: 0 10px;
-                    &:hover{
-                        color: #5777ad;
+                    span{
+                        &:hover{
+                            color: #5777ad;
+                        }
                     }
                 }
             }
@@ -294,9 +305,7 @@ body{
                         border-radius: 2px;
                         padding: 10px;
                         cursor: default;
-                        &:hover{
-                            color: red !important;
-                        }
+                        
                         span{
                            background-color: #6f77a7;
                            padding: 6px;
@@ -376,7 +385,7 @@ body{
             margin-right: 10px;
         }
         h1{
-            margin: 40px 0;
+            margin: 10px 0;
         }
         span{
             font-style: italic;
@@ -421,8 +430,9 @@ body{
         }
     }
     .allv{
-       /*  padding: 0 100px; */
-        margin: 100px 0;
+       
+        margin-top: 100px;
+        margin-bottom: 100px;
         h1{
             padding-bottom: 30px;
         }
@@ -486,11 +496,4 @@ body{
             }
         }
     }
-
-    pre code {
-        background-color: #eee;
-        border: 1px solid #999;
-        display: block;
-        padding: 20px;
-      }
 }

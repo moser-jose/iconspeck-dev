@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './assets/grid.scss'
 import './assets/page.scss'
 import  {FontAwesomeIcon}  from '@fortawesome/react-fontawesome'
 import {useSpeckContext} from './contexts/SpeckContext'
@@ -14,7 +15,7 @@ const App = () => {
 
     const handleFilter = ({ target }) => {
         setFild(target.value);
-        if (target.value == "") {
+        if (target.value === "") {
             setFilter([]);
         }
         else {
@@ -40,8 +41,8 @@ const App = () => {
                 setCopiado(true) 
             }
             else
-                var txt =  target.getAttribute("ic");
-                navigator.clipboard.writeText(txt)
+                var txtC =  target.getAttribute("ic");
+                navigator.clipboard.writeText(txtC)
                 setCopiado(true)
          }
         
@@ -59,19 +60,10 @@ const App = () => {
             localStorage.removeItem("theme");
         }
     }
-    function onCopiar() {
-        /* Get the text field */
-        var copyText = document.getElementById("copy");
-      
-        /* Select the text field */
-       /*  copyText.select();
-        copyText.setSelectionRange(0, 99999); */ /* For mobile devices */
-      
-        /* Copy the text inside the text field */
-        navigator.clipboard.writeText(copyText.innerText);
-        
-        /* Alert the copied text */
-        alert("Copied the text: " + copyText.innerText);
+    function onCopiar({target}) {
+        var txt =  target.getAttribute("link");
+        navigator.clipboard.writeText(txt)
+        setCopiado(true)
       }
 
 
@@ -100,7 +92,7 @@ const App = () => {
         <div className="page">
            {copiado === true &&  
                 <div class="alerta" >
-                    <p class="alerta_mensagem">Ícone copiado para área de transferência</p>
+                    <p class="alerta_mensagem">Elemento copiado para área de transferência</p>
                 </div>
             }
             <div className="header">
@@ -114,9 +106,9 @@ const App = () => {
                 </div>
             </div>
             </div>
-                <div className="corpo">
+                <div className="corpo container">
                 <div className="header-second">
-                <img className="img" src={logo}/>
+                <img alt="iconspeck" className="img" src={logo}/>
                     <div className="header-third">
                     
                         <h1 className="titulo" >
@@ -129,13 +121,13 @@ const App = () => {
                         <span className="iconsp">{metadata.fontFamily}</span> {metadata.description} 😅
                     </p>
                 <div className="redes">
-                    <a title="github" target="_blank" href="https://www.github.com/moser-jose/iconspeck" className="iconspeck speck-github"></a>
-                    <a title="npm" target="_blank" href="https://www.npmjs.com/package/iconspeck" className="iconspeck speck-npm-sp"></a>
-                    <a title="jsdelivr" target="_blank" href="https://www.jsdelivr.com/package/npm/iconspeck?version=1.1.7" className="iconspeck speck-jsdelivr"></a>
-                    <a title="unpkg" target="_blank" href="https://unpkg.com/browse/iconspeck@1.1.7/" className="iconspeck speck-unpkg"></a>
+                    <a title="github" rel="noreferrer" target="_blank" href="https://www.github.com/moser-jose/iconspeck"><span className="iconspeck speck-github"></span></a>
+                    <a title="npm"  rel="noreferrer" target="_blank" href="https://www.npmjs.com/package/iconspeck"><span className="iconspeck speck-npm-sp"></span></a>
+                    <a title="jsdelivr"rel="noreferrer"  target="_blank" href="https://www.jsdelivr.com/package/npm/iconspeck?version=1.1.7"><span className="iconspeck speck-jsdelivr"></span></a>
+                    <a title="unpkg" rel="noreferrer" target="_blank" href="https://unpkg.com/browse/iconspeck@1.1.7/"><span className="iconspeck speck-unpkg"></span></a>
                 
                 </div>
-                <a title="Github" target="_blank" href="https://www.github.com/moser-jose" className="by"><span>by</span> {metadata.designer}</a>
+                <a title="Github" rel="noreferrer" target="_blank" href="https://www.github.com/moser-jose" className="by"><span>by</span> {metadata.designer}</a>
                 </div>
                 <div className="search">
                         <form>
@@ -183,29 +175,29 @@ const App = () => {
                     </div>
                 </div>
 
-            <div className="utilizacao">
+            <div className="utilizacao container">
                     <h1>Como utilizar o iconspeck 😱</h1>
                     <h2>1</h2> <p className="p">
-                        O Iconspeck pode ser encontrado 👉 <span><a target="_blank" title="jsdelivr" href="https://cdn.jsdelivr.net/npm/iconspeck@1.1.7/css/iconspeck.min.css">aqui</a></span> ou <span><a target="_blank" title="unpkg" href="https://unpkg.com/iconspeck@1.1.7/css/iconspeck.min.css">aqui</a></span>.  
+                        O Iconspeck pode ser encontrado 👉 <span><a rel="noreferrer" target="_blank" title="jsdelivr" href="https://cdn.jsdelivr.net/npm/iconspeck@1.1.7/css/iconspeck.min.css">aqui</a></span> ou <span><a rel="noreferrer" target="_blank" title="unpkg" href="https://unpkg.com/iconspeck@1.1.7/css/iconspeck.min.css">aqui</a></span>.  
                        
                     </p>
                     <p className="forma">Forma de utilizar:</p>
                     <div className="code">
                     <code>{'<link href="https://cdn.jsdelivr.net/npm/iconspeck@1.1.7/css/iconspeck.min.css" rel="stylesheet"/>'} </code>
-                    <span className="copiar">Copiar</span>
+                    <span onClick={onCopiar} link='<link href="https://cdn.jsdelivr.net/npm/iconspeck@1.1.7/css/iconspeck.min.css" rel="stylesheet"/>' className="copiar">Copiar</span>
                     </div>
                     
                     <p className="forma">Ou</p>
                     <div className="code">
-                        <code  id="copy">{'<link href="https://unpkg.com/iconspeck@1.1.7/css/iconspeck.min.css" rel="stylesheet">'} </code>
-                        <span className="copiar" onClick={onCopiar}>Copiar</span>
+                        <code  id="copy">{'<link href="https://unpkg.com/iconspeck@1.1.7/css/iconspeck.min.css" rel="stylesheet"/>'} </code>
+                        <span className="copiar" link='<link href="https://unpkg.com/iconspeck@1.1.7/css/iconspeck.min.css" rel="stylesheet"/>' onClick={onCopiar}>Copiar</span>
                     </div>
                     <p className="forma">👉 Lembre-se sempre <span>class="iconspeck speck-nomeDoÍcone"</span></p>
                     
 
                     <ul>
                     <h2>2</h2>
-                        <li>Faça o download do repositório no  <a title="github" target="_blank" href="https://www.github.com/moser-jose/iconspeck">github</a> ou através do <a title="NPM" target="_blank" href="https://www.npmjs.com/package/iconspeck">npm</a>;</li>
+                        <li>Faça o download do repositório no  <a rel="noreferrer" title="github" target="_blank" href="https://www.github.com/moser-jose/iconspeck">github</a> ou através do <a rel="noreferrer" title="NPM" target="_blank" href="https://www.npmjs.com/package/iconspeck">npm</a>;</li>
                         <li>Copie o ficheiro <span>iconspeck.css</span> ou o <span>iconspeck.min.css</span> da pasta   <span>css</span> para o seu projecto;</li>
                         <li>Copie a pasta <span>fonts</span> para o seu projecto;</li>
                         <li>Certifique-se que o caminho da pasta <span>fonts</span> está correcto dentro do ficheiro <span>iconspeck.css</span>;</li>
@@ -215,23 +207,21 @@ const App = () => {
                     </ul>
                     <p className="forma">👉 Lembre-se sempre <span>class="iconspeck speck-nomeDoÍcone"</span></p>
                 </div>
-            <div className="allv">
+            <div className="allv container">
                     <h1>Versões do iconspeck 🙌</h1>
                     <h2>v1.1.7 <span>actual</span></h2>
-                    <h3>Adicionado mais 34 novos ícones. 💎</h3>
+                    <h3>Adicionado mais de 45 novos ícones. 💎</h3>
                     <h2>v1.1.6</h2>
                     <h3>Adicionado mais 39 novos ícones. 💎</h3>
                     <h2>v1.1.5</h2>
                     <h3>Atualização do projeto e adicionado mais 5 novos ícones - express-sp, firebase-sp, graphql, spring. 💎</h3>
                     <h2>v1.1.4</h2>
                     <h3>Atualização do projeto e adicionado mais 5 novos ícones - eslint, prettier, visualg, portugol, django-alt. 💎</h3>
-                    <h2>v1.1.2</h2>
-                    <h3>Atualização do iconspeck.css e iconspeck.min.css. 🍏</h3>
-                    <a className="link" target="_blank" href="https://github.com/moser-jose/iconspeck#readme">Saiba mais no Github ✌🏼</a>
+                    <a rel="noreferrer" className="link" target="_blank" href="https://github.com/moser-jose/iconspeck#readme">Saiba mais no Github ✌🏼</a>
                 </div>
             
             <div className="github">
-                <p>👨🏽‍💻 Aventure-se e contribua com o projecto no <a className="link" target="_blank" href="https://github.com/moser-jose/iconspeck">Github</a> ✌🏼</p>
+                <p>👨🏽‍💻 Aventure-se e contribua com o projecto no <a className="link" rel="noreferrer" target="_blank" href="https://github.com/moser-jose/iconspeck">Github</a> ✌🏼</p>
             </div>
 
             <div className="header">OLA</div>
