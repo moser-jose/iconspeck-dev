@@ -1,0 +1,18 @@
+{
+    "git.enabled": false,
+    "files.exclude": {
+        "node_modules":false,
+        ".vscode":false,
+        ".gitignore":true,
+        "public":false,
+        "package.json":false,
+        "package-lock.json":true,
+        "README.md":true
+    },
+    "liveServer.settings.port": 81,
+    "cSpell.words": [
+        "iconspeck",
+        "Mekadir",
+        "Moser"
+    ],
+}
