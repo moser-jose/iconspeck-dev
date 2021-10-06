@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import {getIcons} from '../api'
+import { getIcons } from '../api'
 
 export const StateContext = createContext();
 export const StateSpeckContext = ({ children }) => {
@@ -11,17 +11,14 @@ export const StateSpeckContext = ({ children }) => {
         const json = await response.json();
         setIcons(json.icons)
         setMetadata(json.preferences.fontPref.metadata)
-        /* console.log(json.preferences.fontPref.metadata)
-        console.log(json.icons) */
     }
-
     useEffect(() => {
         getSpeck() 
     }, [])
 
     return (
         <StateContext.Provider
-            value={{ icons,metadata }}>
+            value = {{ icons, metadata }}>
             {children}
         </StateContext.Provider>
     );

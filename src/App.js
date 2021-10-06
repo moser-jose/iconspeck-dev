@@ -41,8 +41,8 @@ const App = () => {
                 setCopiado(true) 
             }
             else
-                var txtC =  target.getAttribute("ic");
-                navigator.clipboard.writeText(txtC)
+                var txt =  target.getAttribute("ic");
+                navigator.clipboard.writeText(txt)
                 setCopiado(true)
          }
         
@@ -91,8 +91,8 @@ const App = () => {
         
         <div className="page">
            {copiado === true &&  
-                <div class="alerta" >
-                    <p class="alerta_mensagem">Elemento copiado para área de transferência</p>
+                <div className="alerta" >
+                    <p className="alerta_mensagem">Elemento copiado para área de transferência</p>
                 </div>
             }
             <div className="header">

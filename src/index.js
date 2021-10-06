@@ -19,7 +19,6 @@ library.add(fab,
   faClone
 )
 ReactDOM.render(
-  
   <React.StrictMode>
     <StateSpeckContext>
       <App />

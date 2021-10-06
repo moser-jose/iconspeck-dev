@@ -497,3 +497,227 @@ body{
         }
     }
 }
+
+@media only screen and (min-width: 1461px) and (max-width: 1600px){
+    .container{
+        width: 1200px !important;
+    }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1460px){
+    .container{
+        width: 990px !important;
+    }
+    .page{
+        .alerta{
+            .alerta_mensagem {
+                font-size: 0.8rem;
+              }
+        }
+        .header{
+            height: 50px;
+            .label {
+                padding: 2px 4px;
+                height: 17px;
+                width: 33px;
+                transform: scale(1.4);
+                .ball {
+                    height: 11px;
+                    width: 11px;
+                }
+                .fa-moon {
+                    font-size: 9px;
+                }
+                .fa-sun {
+                    font-size: 9px;
+                }
+                .ball-dark{
+                    transform: translateX(18px) !important;
+                }
+            
+            }
+        }
+        .corpo{
+            .header-second{
+                margin: 40px 0;
+                img{
+                    width: 90px;
+                }
+                .header-third{
+                    .titulo{
+                        font-size: 3.5rem;
+                    }
+                    .versao{
+                        font-size: 12px;
+                        height: 55px;
+                        width: 55px;
+                    }
+                    
+                }
+                p{
+                    font-size: 1.03rem;
+                }
+                .redes{
+                    a{
+                        font-size: 24px;
+                    }
+                }
+                .by{
+                    font-size: 17px;
+                }
+                
+            }
+            .search{
+                form{
+                    .input{
+                        padding: 5px 20px;
+                        input{
+                            padding: 16px 0;
+                        }
+                    }
+                }
+                .icons{
+                    margin: 60px 0;
+                    .icon{
+                        .name{
+                            font-size: 15px;
+                            span{
+                               background-color: #6f77a7;
+                               padding: 6px;
+                               letter-spacing: .5px;
+                               margin-top: 8px;
+                               border-radius: 2px;
+                               color: #fff;
+                               font-size: 188px !important;
+                               cursor: pointer;
+                               &:hover{
+                                background-color: #777fb1;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .utilizacao{
+            .code{
+                font-size: 14px;
+            }
+            h2{
+                font-size: 24px !important;
+                height: 35px;
+                width: 35px;
+            }
+            h1{
+                margin: 10px 0 30px;
+                font-size: 22px;
+            }
+            span{
+                font-style: italic;
+                background-color: #6f77a7;
+                padding: 4px 8px;;
+                border-radius: 2px;
+                color: #fff;
+                font-family:monospace !important;
+            }
+            .p{
+                font-size: 16px;
+            }
+            .forma{
+                font-size: 14px;
+            }
+            ul{
+                margin-top: 50px;
+                li{
+                    margin: 16px 40px 0 70px;
+                    font-size: 16px;
+                    &::before{
+                        height: 5px;
+                        width: 5px;
+                    }
+                }
+            }
+        }
+        .allv{
+           
+            margin-top: 100px;
+            margin-bottom: 100px;
+            h1{
+                padding-bottom: 30px;
+            }
+            h2{
+                font-size: 22px !important;
+                margin: 20px 0 10px;
+                position: relative;
+                &::before{
+                    content: "";
+                    height: 10px;
+                    width: 10px;
+                    background-color: #3f506d;
+                    display: inline-block;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+                span{
+                    padding: 3px 8px;
+                    background-color:#26864b;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    position: absolute;
+                    top: -10px;
+                    margin-left: 6px;
+                    color: #fff;
+                }
+            }
+            h3{
+                font-size: 16px;
+                letter-spacing: .3px;
+                margin-left: 20px;
+                font-weight: 400;
+                &::before{
+                    content: "";
+                    height: 3px;
+                    width: 20px;
+                    background-color: #3f506d;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+            a{
+                text-decoration: underline;
+                font-size: 14px;
+                margin-top: 30px;
+                display: block;
+            }
+        }
+        .github{
+            
+            margin: 100px 0;
+            background-color: #3f506d;
+            text-align: center;
+            padding: 40px 0;
+            p{
+                font-size: 18px;
+                color: #dce9ff;
+                a{
+                    color: #dce9ff;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 758px) and (max-width: 999px){
+   
+    .container{
+        width: 708px !important;
+    }
+
+}
+@media only screen and (max-width: 757px) {                                                                        
+    
+    .container {
+        width: 300px !important;
+    }
+
+}
