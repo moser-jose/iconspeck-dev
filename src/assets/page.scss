@@ -392,6 +392,7 @@ body{
             background-color: #6f77a7;
             padding: 4px 8px;;
             border-radius: 2px;
+            line-height: 28px;
             color: #fff;
             font-family:monospace !important;
         }
@@ -505,7 +506,7 @@ body{
 }
 @media only screen and (min-width: 1000px) and (max-width: 1460px){
     .container{
-        width: 990px !important;
+        width: 980px !important;
     }
     .page{
         .alerta{
@@ -639,70 +640,25 @@ body{
             }
         }
         .allv{
-           
-            margin-top: 100px;
-            margin-bottom: 100px;
+            margin-top: 50px;
             h1{
-                padding-bottom: 30px;
+                font-size: 22px;
             }
             h2{
-                font-size: 22px !important;
-                margin: 20px 0 10px;
-                position: relative;
-                &::before{
-                    content: "";
-                    height: 10px;
-                    width: 10px;
-                    background-color: #3f506d;
-                    display: inline-block;
-                    margin-right: 10px;
-                    border-radius: 50%;
-                }
-                span{
-                    padding: 3px 8px;
-                    background-color:#26864b;
-                    font-size: 12px;
-                    border-radius: 4px;
-                    position: absolute;
-                    top: -10px;
-                    margin-left: 6px;
-                    color: #fff;
-                }
+                font-size: 16px !important;
             }
             h3{
-                font-size: 16px;
-                letter-spacing: .3px;
-                margin-left: 20px;
-                font-weight: 400;
-                &::before{
-                    content: "";
-                    height: 3px;
-                    width: 20px;
-                    background-color: #3f506d;
-                    display: inline-block;
-                    margin-right: 10px;
-                }
-            }
-            a{
-                text-decoration: underline;
                 font-size: 14px;
-                margin-top: 30px;
-                display: block;
             }
+            
         }
         .github{
-            
             margin: 100px 0;
             background-color: #3f506d;
             text-align: center;
             padding: 40px 0;
             p{
-                font-size: 18px;
-                color: #dce9ff;
-                a{
-                    color: #dce9ff;
-                    text-decoration: underline;
-                }
+                font-size: 16px;
             }
         }
     }
