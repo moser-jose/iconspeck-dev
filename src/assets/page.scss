@@ -7,12 +7,26 @@
     list-style: none;
     text-decoration: none;
 }
+
+
+
+
 a{
     color: #292c35;
 }
 .dark {
+
+
     background: #292c35 !important;
     transition: background 0.3s linear;
+
+    #loader {
+        #box {
+            background: #dce9ff !important;
+          }
+      }
+
+
     .alerta{
         .alerta_mensagem {
             background: #dce9ff !important;
@@ -51,6 +65,62 @@ body{
     color: #3f506d;
 }
 .page{
+
+    
+#loader {
+    /* Uncomment this to make it run! */
+    /*
+       animation: loader 5s linear infinite; 
+    */
+    
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    #box {
+        width: 50px;
+        height: 50px;
+        background: #3f506d;
+        animation: animate .5s linear infinite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+      }
+      @keyframes animate {
+        17% { border-bottom-right-radius: 3px; }
+        25% { transform: translateY(9px) rotate(22.5deg); }
+        50% {
+          transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+          border-bottom-right-radius: 40px;
+        }
+        75% { transform: translateY(9px) rotate(67.5deg); }
+        100% { transform: translateY(0) rotate(90deg); }
+      } 
+      #shadow { 
+        width: 50px;
+        height: 5px;
+        background: #000;
+        opacity: 0.1;
+        position: absolute;
+        top: 59px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow .5s linear infinite;
+      }
+      @keyframes shadow {
+        50% {
+          transform: scale(1.2,1);
+        }
+      }
+      
+  }
+  @keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+  }
+  
+  
+
     .alerta{
         z-index: 6;
         position: fixed;
@@ -497,6 +567,22 @@ body{
             }
         }
     }
+    .footer{
+        height: 60px;
+        background-color: #3f506d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            color: #dce9ff;
+            font-size: 12px;
+            letter-spacing: 1.1px;
+            a{
+                color: #dce9ff;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1461px) and (max-width: 1600px){
@@ -653,7 +739,7 @@ body{
             
         }
         .github{
-            margin: 100px 0;
+            margin: 50px 0;
             background-color: #3f506d;
             text-align: center;
             padding: 40px 0;
@@ -661,7 +747,11 @@ body{
                 font-size: 16px;
             }
         }
+        .footer{
+            height: 50px;
+        }
     }
+    
 }
 @media only screen and (min-width: 758px) and (max-width: 999px){
    

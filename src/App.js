@@ -90,7 +90,10 @@ const App = () => {
     return (
         
         <div className="page">
-           {copiado === true &&  
+            {
+                icons.length !==0 ?
+                <>
+                {copiado === true &&  
                 <div className="alerta" >
                     <p className="alerta_mensagem">Elemento copiado para área de transferência</p>
                 </div>
@@ -141,8 +144,7 @@ const App = () => {
                                 </div>
                            </form>
 
-                           {
-                               icons.length!==0 ?
+                           
                                <div className="icons">
                                {
                                    filter.length!==0 ?
@@ -168,10 +170,6 @@ const App = () => {
                                    }).slice(0,80)
                                }
                                </div>
-                        :    <Loading/>    
-                           }
-
-                       
                     </div>
                 </div>
 
@@ -207,6 +205,9 @@ const App = () => {
                     </ul>
                     <p className="forma">👉 Lembre-se sempre <span>class="iconspeck speck-nomeDoÍcone"</span></p>
                 </div>
+                <div className="github">
+                <p>👨🏽‍💻 Aventure-se e contribua com o projecto no <a className="link" rel="noreferrer" target="_blank" href="https://github.com/moser-jose/iconspeck">Github</a> ✌🏼</p>
+            </div>
             <div className="allv container">
                     <h1>Versões do iconspeck 🙌</h1>
                     <h2>v1.1.7 <span>actual</span></h2>
@@ -220,12 +221,15 @@ const App = () => {
                     <a rel="noreferrer" className="link" target="_blank" href="https://github.com/moser-jose/iconspeck#readme">Saiba mais no Github ✌🏼</a>
                 </div>
             
-            <div className="github">
-                <p>👨🏽‍💻 Aventure-se e contribua com o projecto no <a className="link" rel="noreferrer" target="_blank" href="https://github.com/moser-jose/iconspeck">Github</a> ✌🏼</p>
-            </div>
+            
 
-            <div className="header">OLA</div>
-        </div>
+            <div className="footer">
+            <p><a href="/">iconspeck</a> &copy; {new Date().getFullYear()}. Alguns direitos reservados</p>
+            </div>
+        
+                </>:<Loading/>
+            }
+           </div>
     )
 }
 export default App;
