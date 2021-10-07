@@ -37,6 +37,7 @@ const App = () => {
         if (target !== currentTarget)
             {
                 var txt =  currentTarget.getAttribute("ic");
+                
                 navigator.clipboard.writeText(txt)
                 setCopiado(true) 
             }

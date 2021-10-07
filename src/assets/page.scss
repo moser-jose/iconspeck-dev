@@ -118,9 +118,6 @@ body{
     0% { left: -100px }
     100% { left: 110%; }
   }
-  
-  
-
     .alerta{
         z-index: 6;
         position: fixed;
@@ -444,7 +441,7 @@ body{
             }
         }
         h2{
-            font-size: 30 !important;
+            font-size: 30px !important;
             height: 40px;
             width: 40px;
             background-color: #3f506d;
@@ -462,12 +459,12 @@ body{
             background-color: #6f77a7;
             padding: 4px 8px;;
             border-radius: 2px;
-            line-height: 28px;
+            line-height: 32px;
             color: #fff;
             font-family:monospace !important;
         }
         .p{
-            display: inline-block;
+            display: initial;
             line-height: 1.8;
             letter-spacing: .5px;
             font-size: 18px;
@@ -480,12 +477,19 @@ body{
         .forma{
             margin: 20px 0;
             font-size: 18px;
-            margin-left: 58px;
+        }
+        .code{
+            margin: 0;
+            overflow-y: auto;
+            code{
+                white-space: nowrap;
+                margin-right: 20px;
+            }
         }
         ul{
             margin-top: 50px;
             li{
-                margin: 16px 40px 0 70px;
+                margin: 16px 0 0 0 !important;
                 font-size: 18px;
                 &::before{
                     content: "";
@@ -557,7 +561,7 @@ body{
         margin: 100px 0;
         background-color: #3f506d;
         text-align: center;
-        padding: 40px 0;
+        padding: 40px 0px !important;
         p{
             font-size: 18px;
             color: #dce9ff;
@@ -792,5 +796,206 @@ body{
     .container {
         width: 300px !important;
     }
+    .page{
+        .alerta{
+            .alerta_mensagem {
+                font-size: 0.8rem;
+              }
+        }
+        .header{
+            height: 50px;
+            .label {
+                padding: 2px 4px;
+                height: 17px;
+                width: 33px;
+                transform: scale(1.4);
+                .ball {
+                    height: 11px;
+                    width: 11px;
+                }
+                .fa-moon {
+                    font-size: 9px;
+                }
+                .fa-sun {
+                    font-size: 9px;
+                }
+                .ball-dark{
+                    transform: translateX(18px) !important;
+                }
+            
+            }
+        }
+        .corpo{
+            .header-second{
+                margin: 40px 0;
+                img{
+                    width: 90px;
+                }
+                .header-third{
+                    .titulo{
+                        font-size: 2.8rem;
+                    }
+                    .versao{
+                        font-size: 12px;
+                        height: 55px;
+                        width: 55px;
+                    }
+                    
+                }
+                p{
+                    font-size: 1.03rem;
+                }
+                .redes{
+                    a{
+                        font-size: 24px;
+                    }
+                }
+                .by{
+                    font-size: 17px;
+                }
+                
+            }
+            .search{
+                form{
+                    .input{
+                        padding: 5px 20px;
+                        width: 300px;
+                        input{
+                            padding: 14px 0;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .icons{
+                    margin: 40px 0;
+                    /* display: none; */
+                    width: 300px !important;
+                    grid-template-columns:   1fr 1fr 1fr !important;
+                    justify-content: space-around;
+                    .icon{
+                        .name{
+                            font-size: 15px;
+                            span{
+                               background-color: #6f77a7;
+                               padding: 6px;
+                               letter-spacing: .5px;
+                               margin-top: 8px;
+                               border-radius: 2px;
+                               color: #fff;
+                               font-size: 188px !important;
+                               cursor: pointer;
+                               &:hover{
+                                background-color: #777fb1;
+                               }
+                            }
+                        }
+                        &:hover .copy{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .utilizacao{
+            .code{
+                font-size: 14px;
+                code{
+                    margin: 0;
+                }
+                .copiar{
+                    display: none;
+                }
+            }
+            h2{
+                font-size: 24px !important;
+                height: 35px;
+                width: 35px;
+            }
+            h1{
+                margin: 10px 0 30px;
+                font-size: 20px;
+            }
+            span{
+                font-style: italic;
+                background-color: #6f77a7;
+                padding: 4px 8px;;
+                border-radius: 2px;
+                color: #fff;
+                font-family:monospace !important;
+            }
+            .p{
+                font-size: 16px;
+            }
+            .forma{
+                font-size: 14px;
+            }
+            ul{
+                margin-top: 50px;
+                li{
+                    margin: 16px 40px 0 70px;
+                    font-size: 16px;
+                    &::before{
+                        height: 5px;
+                        width: 5px;
+                    }
+                }
+            }
+        }
+        .allv{
+            margin-top: 50px;
+            h1{
+                font-size: 22px;
+            }
+            h2{
+                font-size: 16px !important;
+            }
+            h3{
+                font-size: 14px;
+            }
+            
+        }
+        .github{
+            margin: 50px 0;
+            background-color: #3f506d;
+            text-align: center;
+            padding: 40px 0;
+            p{
+                font-size: 16px;
+            }
+        }
+        .footer{
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            background-color: #3f506d;
+            .foo{
+               
+                height: 90px;
+                display: flex;
+                align-items: center;
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+                p{
+                    margin-top: 10px;
+                }
+                .byR{
+                    display: flex;
+                }
+                .gfoo{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                
+            }
+    
+            
+        }
+    }
+    
 
 }
