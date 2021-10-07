@@ -224,7 +224,16 @@ const App = () => {
             
 
             <div className="footer">
-            <p><a href="/">iconspeck</a> &copy; {new Date().getFullYear()}. Alguns direitos reservados</p>
+                <div className="container">
+                    <div className="foo">
+                        <p><a href="/">iconspeck</a> &copy; {new Date().getFullYear()}. Alguns direitos reservados</p>
+                    <div className="byR">
+                        <a className="gfoo" title="github" rel="noreferrer" target="_blank" href="https://www.github.com/moser-jose/iconspeck"><span className="iconspeck speck-github"></span></a>
+                        <a className="gfoo" title="npm" rel="noreferrer" target="_blank" href="https://www.npmjs.com/package/iconspeck"><span className="iconspeck speck-npm-sp"></span></a>
+                     
+                     </div></div>   
+                </div>
+                
             </div>
         
                 </>:<Loading/>

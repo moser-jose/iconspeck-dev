@@ -8,12 +8,10 @@
 .container {
   width: 1600px;
   margin: 0 auto;
-  padding: 0;
-  /* position: relative; */
 }
 .container:after,
 .container:before {
-  content: " ";
+  content: "";
   display: table;
 }
 .container:after {

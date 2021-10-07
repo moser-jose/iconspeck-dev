@@ -570,18 +570,35 @@ body{
     .footer{
         height: 60px;
         background-color: #3f506d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        p{
-            color: #dce9ff;
-            font-size: 12px;
-            letter-spacing: 1.1px;
-            a{
+        .foo{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            p{
                 color: #dce9ff;
+                font-size: 12px;
+                letter-spacing: 1.1px;
+                a{
+                    color: #dce9ff;
+                }
+            }
+            
+            .fby{
+                color: #dce9ff;
+                font-size: 12px;
+            }
+            .byR{
+                justify-self: end;
+                .gfoo{
+                    color: #dce9ff;
+                    font-size: 12px;
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
             }
         }
+
+        
     }
 }
 
@@ -749,6 +766,16 @@ body{
         }
         .footer{
             height: 50px;
+            background-color: #3f506d;
+            .foo{
+               
+                height: 50px;
+               
+                
+                
+            }
+    
+            
         }
     }
     
