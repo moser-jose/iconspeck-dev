@@ -578,6 +578,7 @@ body{
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: center;
+            height: 60px;
             p{
                 color: #dce9ff;
                 font-size: 12px;
@@ -772,11 +773,7 @@ body{
             height: 50px;
             background-color: #3f506d;
             .foo{
-               
                 height: 50px;
-               
-                
-                
             }
     
             
