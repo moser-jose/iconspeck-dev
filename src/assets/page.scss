@@ -789,6 +789,175 @@ body{
     .container{
         width: 708px !important;
     }
+    .page{
+        .alerta{
+            .alerta_mensagem {
+                font-size: 0.8rem;
+              }
+        }
+        .header{
+            height: 50px;
+            .label {
+                padding: 2px 4px;
+                height: 17px;
+                width: 33px;
+                transform: scale(1.4);
+                .ball {
+                    height: 11px;
+                    width: 11px;
+                }
+                .fa-moon {
+                    font-size: 9px;
+                }
+                .fa-sun {
+                    font-size: 9px;
+                }
+                .ball-dark{
+                    transform: translateX(18px) !important;
+                }
+            
+            }
+        }
+        .corpo{
+            .header-second{
+                margin: 40px 0;
+                img{
+                    width: 90px;
+                }
+                .header-third{
+                    .titulo{
+                        font-size: 3.5rem;
+                    }
+                    .versao{
+                        font-size: 12px;
+                        height: 55px;
+                        width: 55px;
+                    }
+                    
+                }
+                p{
+                    font-size: 1.03rem;
+                }
+                .redes{
+                    a{
+                        font-size: 24px;
+                    }
+                }
+                .by{
+                    font-size: 17px;
+                }
+                
+            }
+            .search{
+                form{
+                    .input{
+                        padding: 5px 20px;
+                        input{
+                            padding: 16px 0;
+                        }
+                    }
+                }
+                .icons{
+                    margin: 60px 0;
+                    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                
+                    .icon{
+                        .name{
+                            font-size: 15px;
+                            span{
+                               background-color: #6f77a7;
+                               padding: 6px;
+                               letter-spacing: .5px;
+                               margin-top: 8px;
+                               border-radius: 2px;
+                               color: #fff;
+                               font-size: 188px !important;
+                               cursor: pointer;
+                               &:hover{
+                                background-color: #777fb1;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .utilizacao{
+            .code{
+                font-size: 14px;
+            }
+            h2{
+                font-size: 24px !important;
+                height: 35px;
+                width: 35px;
+            }
+            h1{
+                margin: 10px 0 30px;
+                font-size: 22px;
+            }
+            span{
+                font-style: italic;
+                background-color: #6f77a7;
+                padding: 4px 8px;;
+                border-radius: 2px;
+                color: #fff;
+                font-family:monospace !important;
+            }
+            .p{
+                font-size: 16px;
+            }
+            .forma{
+                font-size: 14px;
+            }
+            ul{
+                margin-top: 50px;
+                li{
+                    margin: 16px 40px 0 70px;
+                    font-size: 16px;
+                    &::before{
+                        height: 5px;
+                        width: 5px;
+                    }
+                }
+            }
+        }
+        .allv{
+            margin-top: 50px;
+            h1{
+                font-size: 22px;
+            }
+            h2{
+                font-size: 16px !important;
+            }
+            h3{
+                font-size: 14px;
+            }
+            
+        }
+        .github{
+            margin: 50px 0;
+            background-color: #3f506d;
+            text-align: center;
+            padding: 40px 0;
+            p{
+                font-size: 16px;
+            }
+        }
+        .footer{
+            height: 50px;
+            background-color: #3f506d;
+            .foo{
+               
+                height: 50px;
+               
+                
+                
+            }
+    
+            
+        }
+    }
 
 }
 @media only screen and (max-width: 757px) {                                                                        
