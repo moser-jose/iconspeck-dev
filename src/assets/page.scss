@@ -686,6 +686,7 @@ body{
                 }
                 .icons{
                     margin: 60px 0;
+                    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
                     .icon{
                         .name{
                             font-size: 15px;
