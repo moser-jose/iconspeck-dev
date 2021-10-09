@@ -350,7 +350,7 @@ body{
             .icons{
                 margin: 80px 0;
                 display: grid;
-                grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
                 width: 100%;
                 .iconspeck{
                     font-size: 45px;
@@ -1128,7 +1128,7 @@ body{
             margin: 50px 0;
             background-color: #3f506d;
             text-align: center;
-            padding: 40px 0;
+            padding: 40px 10px !important;
             p{
                 font-size: 16px;
             }
